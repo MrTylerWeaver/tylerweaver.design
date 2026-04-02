@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tyler Weaver Designs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="logo">TWD<span class="logo-dot">.</span></span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="eyebrow-line"></span>Web Design &amp; Development</p>
+      <h1>I build websites<br>that <span class="gradient-text">mean business</span>.</h1>
+      <p class="hero-sub">Hi, I&apos;m Tyler Weaver &mdash; a designer and developer who turns ideas into fast, clean, custom websites.</p>
+      <div class="hero-cta">
+        <a href="#work" class="btn btn-primary">See My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">scroll<span class="scroll-line"></span></div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <p class="label">About Me</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>I care about the<br><span class="gradient-text">details</span>.</h2>
+          <p>Clean layouts, readable code, and sites that work for real people on real devices. Whether you need a landing page, a full site, or a custom interactive tool &mdash; I understand the goal first, then build the right thing.</p>
+        </div>
+        <div class="skills-list">
+          <div class="skill-tag">HTML / CSS</div>
+          <div class="skill-tag">JavaScript</div>
+          <div class="skill-tag">Responsive Design</div>
+          <div class="skill-tag">UI / UX</div>
+          <div class="skill-tag">Performance</div>
+          <div class="skill-tag">Interactive Tools</div>
+          <div class="skill-tag">Custom Builds</div>
+          <div class="skill-tag">No Templates</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="container">
+      <p class="label">Featured Work</p>
+      <h2 class="section-heading">Projects that <span class="gradient-text">ship</span>.</h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-number">01</div>
+            <div class="project-tag-top">Live Client</div>
+            <h3>First Responders Courier</h3>
+            <p>Full marketing website for an Atlanta-based medical courier. Six pages covering services, compliance certifications, industries served, and client contact &mdash; built to establish trust in a highly regulated field.</p>
+            <div class="project-tags">
+              <span>HTML/CSS</span><span>JavaScript</span><span>Multi-page</span><span>Responsive</span>
+            </div>
+            <a href="https://www.firstresponderscourier.com" target="_blank" rel="noopener" class="project-link">View Live Site <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-number">02</div>
+            <div class="project-tag-top">Barbershop</div>
+            <h3>Frank Cut It</h3>
+            <p>Single-page website for an urban barbershop in Douglasville, GA. Bold dark design with full service menu, real client reviews, pricing, and a direct booking CTA.</p>
+            <div class="project-tags">
+              <span>HTML/CSS</span><span>JavaScript</span><span>Dark Mode</span><span>Responsive</span>
+            </div>
+            <a href="frank-cut-it/index.html" class="project-link">View Project <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-number">03</div>
+            <div class="project-tag-top">Preschool</div>
+            <h3>Heritage Early Learning</h3>
+            <p>Warm, parent-focused website for a preschool serving ages 2&ndash;5. Program listings, tour scheduling, testimonials, and a friendly design built to earn trust with families.</p>
+            <div class="project-tags">
+              <span>HTML/CSS</span><span>JavaScript</span><span>Multi-section</span><span>Responsive</span>
+            </div>
+            <a href="heritage-early-learning/index.html" class="project-link">View Project <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <p class="label">What I Do</p>
+      <h2 class="section-heading">Built for your <span class="gradient-text">goals</span>.</h2>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-number">01</div>
+          <h3>Web Design</h3>
+          <p>Clean, modern layouts built for real users. Mobile-first, fast, and easy to navigate.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-number">02</div>
+          <h3>Web Development</h3>
+          <p>Custom-built sites and tools. No page builders, no bloat &mdash; just code that performs.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-number">03</div>
+          <h3>Landing Pages</h3>
+          <p>Focused pages designed to convert &mdash; clear messaging, strong visuals, fast load times.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container contact-container">
+      <p class="label">Contact</p>
+      <h2 class="section-heading">Let&apos;s build something <span class="gradient-text">great</span>.</h2>
+      <p class="contact-sub">Have a project in mind? Drop me a message and I&apos;ll get back to you within a day.</p>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder=" " required />
+            <label for="email">Your Email</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" id="project" placeholder=" " />
+          <label for="project">Project Type</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder=" " rows="5" required></textarea>
+          <label for="message">Tell me about your project</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message &rarr;</button>
+        <p id="form-msg" class="form-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo">TWD<span class="logo-dot">.</span></span>
+      <p>&copy; 2026 Tyler Weaver Designs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
