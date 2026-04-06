@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Shop | Culture &amp; Kettle</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-symbol">&#9651;</span> Culture &amp; Kettle</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="locations.html">Locations</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-icon" aria-label="View cart">&#128722;<span class="cart-count" id="cart-count">0</span></a>
+      <a href="shop.html" class="btn btn-gold" style="font-size:.75rem;padding:.5rem 1.2rem;">Shop Now</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>The Shop</h1>
+    <p>Every roast has a reason.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="light">Light Roast</button>
+      <button class="filter-btn" data-filter="medium">Medium Roast</button>
+      <button class="filter-btn" data-filter="dark">Dark Roast</button>
+      <button class="filter-btn" data-filter="merch">Merch</button>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card" data-category="light">
+        <a href="product.html?id=first-watch" class="product-card-visual light-bg">
+          <span class="product-icon">&#9728;</span>
+        </a>
+        <div class="product-card-body">
+          <span class="product-tag">Light Roast</span>
+          <h3><a href="product.html?id=first-watch">First Watch</a></h3>
+          <p class="product-desc">Bright, citrus-forward, clean.</p>
+          <div class="product-footer">
+            <span class="product-price">$18.00</span>
+            <button class="btn btn-gold btn-sm" onclick="addToCart('first-watch','First Watch',18.00,'&#9728;','light-bg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="medium">
+        <a href="product.html?id=late-checkout" class="product-card-visual medium-bg">
+          <span class="product-icon">&#128682;</span>
+        </a>
+        <div class="product-card-body">
+          <span class="product-tag">Medium Roast</span>
+          <h3><a href="product.html?id=late-checkout">Late Checkout</a></h3>
+          <p class="product-desc">Smooth, balanced, unhurried.</p>
+          <div class="product-footer">
+            <span class="product-price">$18.00</span>
+            <button class="btn btn-gold btn-sm" onclick="addToCart('late-checkout','Late Checkout',18.00,'&#128682;','medium-bg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="dark">
+        <a href="product.html?id=full-moon" class="product-card-visual dark-bg">
+          <span class="product-icon">&#127765;</span>
+        </a>
+        <div class="product-card-body">
+          <span class="product-tag">Dark Roast</span>
+          <h3><a href="product.html?id=full-moon">Full Moon</a></h3>
+          <p class="product-desc">Bold, smoky, deeply satisfying.</p>
+          <div class="product-footer">
+            <span class="product-price">$18.00</span>
+            <button class="btn btn-gold btn-sm" onclick="addToCart('full-moon','Full Moon',18.00,'&#127765;','dark-bg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="medium">
+        <a href="product.html?id=the-ritual" class="product-card-visual medium-bg">
+          <span class="product-icon">&#9749;</span>
+        </a>
+        <div class="product-card-body">
+          <span class="product-tag">Espresso Blend</span>
+          <h3><a href="product.html?id=the-ritual">The Ritual</a></h3>
+          <p class="product-desc">Concentrated. Intentional. Yours.</p>
+          <div class="product-footer">
+            <span class="product-price">$20.00</span>
+            <button class="btn btn-gold btn-sm" onclick="addToCart('the-ritual','The Ritual',20.00,'&#9749;','medium-bg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="light">
+        <a href="product.html?id=harvest-season" class="product-card-visual light-bg">
+          <span class="product-icon">&#127810;</span>
+        </a>
+        <div class="product-card-body">
+          <span class="product-tag">Seasonal Blend</span>
+          <h3><a href="product.html?id=harvest-season">Harvest Season</a></h3>
+          <p class="product-desc">Limited. Warm. Worth the wait.</p>
+          <div class="product-footer">
+            <span class="product-price">$22.00</span>
+            <button class="btn btn-gold btn-sm" onclick="addToCart('harvest-season','Harvest Season',22.00,'&#127810;','light-bg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="merch">
+        <a href="product.html?id=ck-mug" class="product-card-visual merch-bg">
+          <span class="product-icon">&#9749;</span>
+        </a>
+        <div class="product-card-body">
+          <span class="product-tag">Merch</span>
+          <h3><a href="product.html?id=ck-mug">C&amp;K Mug</a></h3>
+          <p class="product-desc">12oz ceramic. Logo embossed in gold.</p>
+          <div class="product-footer">
+            <span class="product-price">$24.00</span>
+            <button class="btn btn-gold btn-sm" onclick="addToCart('ck-mug','C&amp;K Mug',24.00,'&#9749;','merch-bg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.product-card').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#F5EDD6;display:flex;align-items:center;gap:.5rem;"><span style="color:#C9A84C;">&#9651;</span> Culture &amp; Kettle</div>
+      <p>Specialty coffee roasted with intention. Every bag tells a story.</p>
+    </div>
+    <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Coffee</a></li><li><a href="shop.html">Light Roast</a></li><li><a href="shop.html">Medium Roast</a></li><li><a href="shop.html">Dark Roast</a></li><li><a href="shop.html">Merch</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">Our Story</a></li><li><a href="locations.html">Locations</a></li><li><a href="#">Wholesale</a></li><li><a href="#">Careers</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Culture &amp; Kettle. All rights reserved.</span><span>Roasted with intention.</span></div>
+</footer>
+<script src="cart.js"></script>
+</body></html>

@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Product | Culture &amp; Kettle</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-symbol">&#9651;</span> Culture &amp; Kettle</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="locations.html">Locations</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-icon" aria-label="View cart">&#128722;<span class="cart-count" id="cart-count">0</span></a>
+      <a href="shop.html" class="btn btn-gold" style="font-size:.75rem;padding:.5rem 1.2rem;">Shop Now</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1 id="product-page-title">Loading...</h1>
+    <p id="product-page-tag"></p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="product-detail">
+      <div class="product-detail-visual" id="product-visual">
+        <span class="product-detail-icon" id="product-icon"></span>
+      </div>
+      <div class="product-detail-info">
+        <span class="product-tag" id="product-tag"></span>
+        <h1 id="product-name"></h1>
+        <p class="product-tagline" id="product-tagline"></p>
+        <p class="product-desc-full" id="product-desc"></p>
+        <div class="product-price-row">
+          <span class="product-price-large" id="product-price"></span>
+        </div>
+        <div class="option-group">
+          <p class="option-label">Grind</p>
+          <div class="option-btns">
+            <button class="option-btn active" data-grind="Whole Bean">Whole Bean</button>
+            <button class="option-btn" data-grind="Medium Grind">Medium Grind</button>
+            <button class="option-btn" data-grind="Fine Grind">Fine Grind</button>
+          </div>
+        </div>
+        <div class="qty-row">
+          <p class="option-label">Quantity</p>
+          <div class="qty-selector">
+            <button class="qty-btn" id="qty-minus">&#8722;</button>
+            <span class="qty-display" id="qty-display">1</span>
+            <button class="qty-btn" id="qty-plus">&#43;</button>
+          </div>
+        </div>
+        <button class="btn btn-gold btn-full" id="add-to-cart-btn">Add to Cart</button>
+        <ul class="product-notes">
+          <li>&#9679; Ethically sourced</li>
+          <li>&#9679; Roasted to order</li>
+          <li>&#9679; Free shipping over $40</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const products = {
+  'first-watch': { name:'First Watch', tag:'Light Roast Â· 12 oz', tagline:'Fuel for what's ahead.', price:'18.00', icon:'â˜€', bg:'light-bg', desc:'A bright, citrus-forward light roast with notes of lemon zest, jasmine, and stone fruit. Sourced from high-altitude farms in Ethiopia, roasted light to preserve every delicate layer.' },
+  'late-checkout': { name:'Late Checkout', tag:'Medium Roast Â· 12 oz', tagline:'Ease into the moment.', price:'18.00', icon:'â–¡', bg:'medium-bg', desc:'A smooth, balanced medium roast with notes of milk chocolate, toasted hazelnut, and a hint of caramel. The kind of cup you linger over.' },
+  'full-moon': { name:'Full Moon', tag:'Dark Roast Â· 12 oz', tagline:'Wind down. Take it in.', price:'18.00', icon:'â—', bg:'dark-bg', desc:'A bold, full-bodied dark roast with deep notes of dark chocolate, cedar, and a long smoky finish. Best enjoyed slowly, in the quiet.' },
+  'the-ritual': { name:'The Ritual', tag:'Espresso Blend Â· 12 oz', tagline:'Concentrated. Intentional. Yours.', price:'20.00', icon:'â˜•', bg:'medium-bg', desc:'A precision espresso blend built for clarity and crema. Notes of brown sugar, dried cherry, and bittersweet cocoa. Pull a shot or pour it long.' },
+  'harvest-season': { name:'Harvest Season', tag:'Seasonal Blend Â· 12 oz', tagline:'Limited. Warm. Worth the wait.', price:'22.00', icon:'â§', bg:'light-bg', desc:'Our limited seasonal release. This year's harvest brings notes of cinnamon, dried fig, and warm spice. Once it's gone, it's gone.' },
+  'ck-mug': { name:'C&K Mug', tag:'Merch Â· 12 oz Ceramic', tagline:'Your ritual deserves the right vessel.', price:'24.00', icon:'â˜•', bg:'merch-bg', desc:'A 12oz ceramic mug with the Culture & Kettle triangle logo embossed in gold. Dishwasher safe. Microwave safe. Vibe-safe.' }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || 'first-watch';
+const p = products[id] || products['first-watch'];
+
+document.getElementById('product-page-title').textContent = p.name;
+document.getElementById('product-page-tag').textContent = p.tag;
+document.getElementById('product-tag').textContent = p.tag;
+document.getElementById('product-name').textContent = p.name;
+document.getElementById('product-tagline').textContent = p.tagline;
+document.getElementById('product-desc').textContent = p.desc;
+document.getElementById('product-price').textContent = '$' + p.price;
+document.getElementById('product-icon').textContent = p.icon;
+document.getElementById('product-visual').className = 'product-detail-visual ' + p.bg;
+
+let qty = 1;
+let grind = 'Whole Bean';
+
+document.getElementById('qty-minus').addEventListener('click', () => {
+  if (qty > 1) { qty--; document.getElementById('qty-display').textContent = qty; }
+});
+document.getElementById('qty-plus').addEventListener('click', () => {
+  qty++; document.getElementById('qty-display').textContent = qty;
+});
+
+document.querySelectorAll('.option-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    grind = btn.dataset.grind;
+  });
+});
+
+document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+  for (let i = 0; i < qty; i++) {
+    addToCart(id, p.name, parseFloat(p.price), p.icon, p.bg, grind);
+  }
+});
+</script>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#F5EDD6;display:flex;align-items:center;gap:.5rem;"><span style="color:#C9A84C;">&#9651;</span> Culture &amp; Kettle</div>
+      <p>Specialty coffee roasted with intention. Every bag tells a story.</p>
+    </div>
+    <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Coffee</a></li><li><a href="shop.html">Light Roast</a></li><li><a href="shop.html">Medium Roast</a></li><li><a href="shop.html">Dark Roast</a></li><li><a href="shop.html">Merch</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">Our Story</a></li><li><a href="locations.html">Locations</a></li><li><a href="#">Wholesale</a></li><li><a href="#">Careers</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Culture &amp; Kettle. All rights reserved.</span><span>Roasted with intention.</span></div>
+</footer>
+<script src="cart.js"></script>
+</body></html>
+

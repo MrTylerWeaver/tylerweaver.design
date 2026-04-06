@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Home | Culture &amp; Kettle</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body><nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-symbol">&#9651;</span> Culture &amp; Kettle</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class='active'>Home</a></li>
+      <li><a href="shop.html" >Shop</a></li>
+      <li><a href="about.html" >About</a></li>
+      <li><a href="locations.html" >Locations</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-icon" aria-label="View cart">&#128722;<span class="cart-count" id="cart-count">0</span></a>
+      <a href="shop.html" class="btn btn-gold" style="font-size:.75rem;padding:.5rem 1.2rem;">Shop Now</a>
+    </div>
+    <button class="nav-toggle" onclick="this.previousElementSibling.previousElementSibling.style.display=this.previousElementSibling.previousElementSibling.style.display==='flex'?'none':'flex'" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Small-batch specialty coffee</div>
+      <h1>Coffee roasted<br>for the <em>moment.</em></h1>
+      <p>Three roasts. Three moods. All crafted to meet you exactly where you are &mdash; morning, midday, or midnight.</p>
+      <div class="hero-cta">
+        <a href="shop.html" class="btn btn-gold">Shop the Collection</a>
+        <a href="about.html" class="btn btn-outline">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-bags">
+        <a href="product.html?id=first-watch" class="bag-card light">
+          <div class="bag-card-logo">Culture &amp; Kettle</div>
+          <div class="bag-card-icon">&#9728;</div>
+          <div class="bag-card-name">First Watch</div>
+          <div class="bag-card-roast">Light Roast</div>
+        </a>
+        <a href="product.html?id=late-checkout" class="bag-card medium">
+          <div class="bag-card-logo">Culture &amp; Kettle</div>
+          <div class="bag-card-icon">&#128682;</div>
+          <div class="bag-card-name">Late Checkout</div>
+          <div class="bag-card-roast">Medium Roast</div>
+        </a>
+        <a href="product.html?id=full-moon" class="bag-card dark">
+          <div class="bag-card-logo">Culture &amp; Kettle</div>
+          <div class="bag-card-icon">&#127765;</div>
+          <div class="bag-card-name">Full Moon</div>
+          <div class="bag-card-roast">Dark Roast</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-inner">
+    <span>Small-Batch Roasted</span><span>&bull;</span>
+    <span>Free Shipping Over </span><span>&bull;</span>
+    <span>Whole Bean &amp; Ground</span><span>&bull;</span>
+    <span>12 oz Bags</span><span>&bull;</span>
+    <span>Ethically Sourced</span><span>&bull;</span>
+    <span>Small-Batch Roasted</span><span>&bull;</span>
+    <span>Free Shipping Over </span><span>&bull;</span>
+    <span>Whole Bean &amp; Ground</span><span>&bull;</span>
+    <span>12 oz Bags</span><span>&bull;</span>
+    <span>Ethically Sourced</span><span>&bull;</span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">The Collection</span>
+      <h2>Find your roast</h2>
+      <p>Every blend is named for a feeling. Pick the one that fits your day.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card" onclick="location.href='product.html?id=first-watch'">
+        <div class="product-card-img light-bg">&#9728;</div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Light Roast &bull; 12 oz</div>
+          <h3 class="product-card-name">First Watch</h3>
+          <p class="product-card-desc">Fuel for what&rsquo;s ahead. Bright, citrus-forward, and clean.</p>
+          <div class="product-card-footer">
+            <span class="product-price">.00</span>
+            <button class="add-to-cart-btn" onclick="event.stopPropagation();addToCart('first-watch','First Watch','18.00','&#9728;','light-bg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" onclick="location.href='product.html?id=late-checkout'">
+        <div class="product-card-img medium-bg">&#128682;</div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Medium Roast &bull; 12 oz</div>
+          <h3 class="product-card-name">Late Checkout</h3>
+          <p class="product-card-desc">Ease into the moment. Smooth, balanced, and unhurried.</p>
+          <div class="product-card-footer">
+            <span class="product-price">.00</span>
+            <button class="add-to-cart-btn" onclick="event.stopPropagation();addToCart('late-checkout','Late Checkout','18.00','&#128682;','medium-bg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" onclick="location.href='product.html?id=full-moon'">
+        <div class="product-card-img dark-bg">&#127765;</div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Dark Roast &bull; 12 oz</div>
+          <h3 class="product-card-name">Full Moon</h3>
+          <p class="product-card-desc">Wind down. Take it in. Bold, smoky, and deeply satisfying.</p>
+          <div class="product-card-footer">
+            <span class="product-price">.00</span>
+            <button class="add-to-cart-btn" onclick="event.stopPropagation();addToCart('full-moon','Full Moon','18.00','&#127765;','dark-bg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="shop.html" class="btn btn-outline">View Full Shop</a>
+    </div>
+  </div>
+</section>
+
+<div class="about-strip">
+  <div class="about-strip-inner">
+    <div class="about-strip-text">
+      <span class="section-label">Who We Are</span>
+      <h2>Coffee is culture.<br>We just <em>brew</em> it.</h2>
+      <p>Culture &amp; Kettle started with a simple belief: the right cup of coffee can anchor your whole day. We source ethically, roast intentionally, and name every blend after the feeling it&rsquo;s meant to hold.</p>
+      <a href="about.html" class="btn btn-outline">Read Our Story</a>
+    </div>
+    <div class="about-visual">
+      <div class="about-stat"><span class="about-stat-num">3</span><span class="about-stat-label">Signature Roasts</span></div>
+      <div class="about-stat"><span class="about-stat-num">4</span><span class="about-stat-label">Locations</span></div>
+      <div class="about-stat"><span class="about-stat-num">100%</span><span class="about-stat-label">Ethically Sourced</span></div>
+      <div class="about-stat"><span class="about-stat-num">12oz</span><span class="about-stat-label">Whole Bean Bags</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="section locations-strip">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Find Us</span>
+      <h2>Come in. Stay a while.</h2>
+      <p>Four locations, one vibe. Pull up a chair.</p>
+    </div>
+    <div class="locations-grid">
+      <div class="location-card">
+        <h3>Midtown</h3>
+        <p>412 Peachtree St NE<br>Atlanta, GA 30308</p>
+        <div class="location-hours"><span>Mon&ndash;Fri 6am&ndash;7pm &bull; Sat&ndash;Sun 7am&ndash;6pm</span></div>
+      </div>
+      <div class="location-card">
+        <h3>West End</h3>
+        <p>880 Ralph D. Abernathy Blvd<br>Atlanta, GA 30310</p>
+        <div class="location-hours"><span>Mon&ndash;Fri 7am&ndash;6pm &bull; Sat&ndash;Sun 8am&ndash;5pm</span></div>
+      </div>
+      <div class="location-card">
+        <h3>Decatur</h3>
+        <p>119 E Court Square<br>Decatur, GA 30030</p>
+        <div class="location-hours"><span>Mon&ndash;Sun 7am&ndash;7pm</span></div>
+      </div>
+      <div class="location-card">
+        <h3>Ponce City Market</h3>
+        <p>675 Ponce De Leon Ave NE<br>Atlanta, GA 30308</p>
+        <div class="location-hours"><span>Mon&ndash;Sun 8am&ndash;8pm</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="locations.html" class="btn btn-outline">All Locations &amp; Hours</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#F5EDD6;display:flex;align-items:center;gap:.5rem;"><span style="color:#C9A84C;">&#9651;</span> Culture &amp; Kettle</div>
+      <p>Specialty coffee roasted with intention. Every bag tells a story &mdash; find yours.</p>
+    </div>
+    <div class="footer-col"><h4>Shop</h4><ul>
+      <li><a href="shop.html">All Coffee</a></li>
+      <li><a href="shop.html">Light Roast</a></li>
+      <li><a href="shop.html">Medium Roast</a></li>
+      <li><a href="shop.html">Dark Roast</a></li>
+      <li><a href="shop.html">Merch</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Company</h4><ul>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="#">Wholesale</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Support</h4><ul>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Shipping</a></li>
+      <li><a href="#">Returns</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Culture &amp; Kettle. All rights reserved.</span>
+    <span>Roasted with intention.</span>
+  </div>
+</footer>
+<script src="cart.js"></script>
+</body></html>

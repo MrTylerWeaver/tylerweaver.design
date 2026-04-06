@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Cart | Culture &amp; Kettle</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-symbol">&#9651;</span> Culture &amp; Kettle</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="locations.html">Locations</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-icon" aria-label="View cart">&#128722;<span class="cart-count" id="cart-count">0</span></a>
+      <a href="shop.html" class="btn btn-gold" style="font-size:.75rem;padding:.5rem 1.2rem;">Shop Now</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Your Cart</h1>
+    <p>Review your order before checkout.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="cart-layout">
+      <div class="cart-items-col">
+        <div id="cart-items"></div>
+      </div>
+      <div class="cart-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal">$0.00</span></div>
+        <div class="summary-row"><span>Shipping</span><span id="summary-shipping">$5.99</span></div>
+        <div class="summary-row summary-total"><span>Total</span><span id="summary-total">$5.99</span></div>
+        <button class="btn btn-gold btn-full" onclick="alert('This is a portfolio demo — no real checkout!')">Proceed to Checkout</button>
+        <a href="shop.html" class="cart-continue">&#8592; Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#F5EDD6;display:flex;align-items:center;gap:.5rem;"><span style="color:#C9A84C;">&#9651;</span> Culture &amp; Kettle</div>
+      <p>Specialty coffee roasted with intention. Every bag tells a story.</p>
+    </div>
+    <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Coffee</a></li><li><a href="shop.html">Light Roast</a></li><li><a href="shop.html">Medium Roast</a></li><li><a href="shop.html">Dark Roast</a></li><li><a href="shop.html">Merch</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">Our Story</a></li><li><a href="locations.html">Locations</a></li><li><a href="#">Wholesale</a></li><li><a href="#">Careers</a></li></ul></div>
+    <div class="footer-col"><h4>Support</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Culture &amp; Kettle. All rights reserved.</span><span>Roasted with intention.</span></div>
+</footer>
+<script src="cart.js"></script>
+</body></html>
