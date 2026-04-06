@@ -1,0 +1,17 @@
+﻿  <nav class="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <span class="logo-icon">&#x2728;</span>
+        <span class="logo-text">True Light <span class="logo-sub">Worship Center</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="visit.html">Visit</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="media.html">Media</a></li>
+      </ul>
+      <a href="visit.html" class="nav-cta">Plan a Visit</a>
+      <button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+    </div>
+  </nav>
