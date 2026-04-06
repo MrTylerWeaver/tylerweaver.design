@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>True Light Worship Center | Atlanta, GA</title>
+  <meta name="description" content="True Light Worship Center is a welcoming church community in Atlanta, GA. Join us Sundays at 9AM and 11AM."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .hero { min-height: 100vh; background: linear-gradient(to bottom, rgba(26,39,68,0.88) 0%, rgba(26,39,68,0.6) 100%), url('https://images.unsplash.com/photo-1438232992991-995b671e4b8a?w=1600&q=80') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; padding:120px 24px 80px; }
+    .hero-content { max-width: 760px; }
+    .hero-eyebrow { font-size:0.78rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+    .hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2.8rem,6vw,4.5rem); font-weight:800; color:#fff; line-height:1.1; margin-bottom:20px; }
+    .hero-sub { font-size:1.05rem; color:rgba(255,255,255,0.8); margin-bottom:16px; line-height:1.8; }
+    .hero-service { display:inline-block; background:rgba(201,168,76,0.15); border:1px solid var(--gold); color:var(--gold); font-size:0.82rem; font-weight:700; padding:8px 20px; border-radius:4px; margin-bottom:36px; letter-spacing:1px; }
+    .hero-cta { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+    .identity { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; }
+    .identity-block { padding:48px 40px; text-align:center; border-right:1px solid var(--border); }
+    .identity-block:last-child { border-right:none; }
+    .identity-block .icon { font-size:2rem; margin-bottom:16px; }
+    .identity-block h3 { font-size:1.1rem; font-weight:800; margin-bottom:8px; color:var(--navy); }
+    .identity-block p { font-size:0.88rem; color:var(--muted); line-height:1.7; }
+    .cta-banner { background:var(--navy); padding:64px 24px; text-align:center; }
+    .cta-banner h2 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3vw,2.6rem); color:#fff; margin-bottom:12px; }
+    .cta-banner p { color:rgba(255,255,255,0.65); margin-bottom:32px; font-size:1rem; }
+    .cta-banner-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+    @media(max-width:768px){ .identity{grid-template-columns:1fr;} .identity-block{border-right:none;border-bottom:1px solid var(--border);} }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="logo"><span class="logo-icon">&#x2728;</span><span class="logo-text">True Light <span class="logo-sub">Worship Center</span></span></div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="visit.html">Visit</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="media.html">Media</a></li>
+      </ul>
+      <a href="visit.html" class="nav-cta">Plan a Visit</a>
+      <button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome Home</p>
+      <h1>A place to belong,<br>grow, and serve.</h1>
+      <p class="hero-sub">True Light Worship Center is a community rooted in faith, committed to love, and sent to make a difference in Atlanta and beyond.</p>
+      <div class="hero-service">&#x1F4CD; 456 Worship Lane, Atlanta &nbsp;&bull;&nbsp; Sundays 9AM &amp; 11AM</div>
+      <div class="hero-cta">
+        <a href="visit.html" class="btn btn-primary">Plan a Visit</a>
+        <a href="media.html" class="btn btn-outline">Watch a Message</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="identity">
+        <div class="identity-block reveal">
+          <div class="icon">&#x1F64F;</div>
+          <h3>Rooted in Faith</h3>
+          <p>Everything we do flows from a deep commitment to Scripture, prayer, and the presence of God.</p>
+        </div>
+        <div class="identity-block reveal">
+          <div class="icon">&#x1F91D;</div>
+          <h3>Built on Community</h3>
+          <p>We believe life is better together. From Sunday gatherings to small groups, you belong here.</p>
+        </div>
+        <div class="identity-block reveal">
+          <div class="icon">&#x1F30D;</div>
+          <h3>Sent to Serve</h3>
+          <p>Our faith moves us outward. We are actively engaged in serving Atlanta and the world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="label">What&apos;s Happening</p>
+      <h2 class="section-heading">Get connected this week.</h2>
+      <p class="section-sub">From Sunday worship to midweek groups, there&apos;s always a next step waiting for you.</p>
+      <div class="card-grid-3">
+        <div class="card reveal">
+          <div class="card-icon">&#x26EA;</div>
+          <h3>Sunday Worship</h3>
+          <p>Join us for Spirit-filled worship and practical teaching every Sunday at 9AM and 11AM.</p>
+          <a href="visit.html" style="display:inline-block;margin-top:16px;font-size:0.85rem;font-weight:700;color:var(--gold)">Plan Your Visit &rarr;</a>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">&#x1F4D6;</div>
+          <h3>Small Groups</h3>
+          <p>Go deeper in community through weekly small groups meeting across the Atlanta area.</p>
+          <a href="get-involved.html" style="display:inline-block;margin-top:16px;font-size:0.85rem;font-weight:700;color:var(--gold)">Find a Group &rarr;</a>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">&#x1F3A4;</div>
+          <h3>Latest Message</h3>
+          <p>Missed a Sunday? Catch up on our most recent sermon series anytime, anywhere.</p>
+          <a href="media.html" style="display:inline-block;margin-top:16px;font-size:0.85rem;font-weight:700;color:var(--gold)">Watch Now &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <h2>Ready to take your next step?</h2>
+    <p>Whether you&apos;re visiting for the first time or looking to go deeper &mdash; we&apos;d love to connect with you.</p>
+    <div class="cta-banner-btns">
+      <a href="visit.html" class="btn btn-primary">Plan a Visit</a>
+      <a href="get-involved.html" class="btn btn-outline">Get Connected</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-icon">&#x2728;</span><span class="logo-text" style="color:#fff">True Light <span class="logo-sub">Worship Center</span></span></div>
+        <p>A community rooted in faith, growing in love, and sent to serve. Join us every Sunday.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="visit.html">Plan a Visit</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="media.html">Media</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Times</h4>
+        <ul>
+          <li><a href="#">Sunday 9:00 AM</a></li>
+          <li><a href="#">Sunday 11:00 AM</a></li>
+          <li><a href="#">Wednesday 7:00 PM</a></li>
+        </ul>
+        <h4 style="margin-top:20px">Location</h4>
+        <ul>
+          <li><a href="#">456 Worship Lane</a></li>
+          <li><a href="#">Atlanta, GA 30301</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 True Light Worship Center. All rights reserved.</p>
+      <p>Designed by <a href="https://tylerweaver.design" style="color:var(--gold)">Tyler Weaver Designs</a></p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

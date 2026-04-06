@@ -1,0 +1,38 @@
+﻿  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">&#x2728;</span>
+          <span class="logo-text" style="color:#fff">True Light <span class="logo-sub">Worship Center</span></span>
+        </div>
+        <p>A community rooted in faith, growing in love, and sent to serve. Join us every Sunday.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="visit.html">Plan a Visit</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="media.html">Media</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Times</h4>
+        <ul>
+          <li><a href="#">Sunday 9:00 AM</a></li>
+          <li><a href="#">Sunday 11:00 AM</a></li>
+          <li><a href="#">Wednesday 7:00 PM</a></li>
+        </ul>
+        <h4 style="margin-top:20px">Location</h4>
+        <ul>
+          <li><a href="#">456 Worship Lane</a></li>
+          <li><a href="#">Atlanta, GA 30301</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 True Light Worship Center. All rights reserved.</p>
+      <p>Designed by <a href="https://tylerweaver.design" style="color:var(--gold)">Tyler Weaver Designs</a></p>
+    </div>
+  </footer>
